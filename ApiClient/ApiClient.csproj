@@ -7,9 +7,5 @@
   <ItemGroup>
     <PackageReference Include="System.ServiceModel.Http" Version="4.6.0" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="..\CustomMiddleware\CustomMiddleware.csproj" />
-  </ItemGroup>
 
 </Project>

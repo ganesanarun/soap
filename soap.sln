@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient", "ApiClient\ApiClient.csproj", "{4F56F264-F3B4-41B0-9513-65CAEEA4C975}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmrClient", "EmrClient\EmrClient.csproj", "{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{4F56F264-F3B4-41B0-9513-65CAEEA4C975}.Release|x64.Build.0 = Release|Any CPU
 		{4F56F264-F3B4-41B0-9513-65CAEEA4C975}.Release|x86.ActiveCfg = Release|Any CPU
 		{4F56F264-F3B4-41B0-9513-65CAEEA4C975}.Release|x86.Build.0 = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|x64.Build.0 = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Debug|x86.Build.0 = Debug|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|x64.ActiveCfg = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|x64.Build.0 = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|x86.ActiveCfg = Release|Any CPU
+		{49BC7CF2-A1D6-49D3-8352-17E0F1048D6C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

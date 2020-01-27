@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiClient.Controllers
 {
+    using System.Threading.Tasks;
     using CustomMiddleware;
 
     [ApiController]
@@ -19,25 +18,21 @@ namespace ApiClient.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<string> Get()
         {
-            return Enumerable.Range(1, 5).Select(index =>
+            var complexModel = new ComplexModelInput
             {
-                var complexModel = new ComplexModelInput
-                {
-                    StringProperty = Guid.NewGuid().ToString(),
-                    IntProperty = new Random().Next(),
-                    ListProperty = new List<string> {"test", "list", "of", "strings"},
-                    DateTimeOffsetProperty = RandomDay()
-                };
-
-                var complexResult = sampleService.PingComplexModel(complexModel);
-                return $"result. FloatProperty: {complexResult.FloatProperty}, " +
+                StringProperty = Guid.NewGuid().ToString(),
+                IntProperty = new Random().Next(),
+                ListProperty = new[] {"test", "list", "of", "strings"},
+                DateTimeOffsetProperty = RandomDay()
+            };
+            var complexResult = await sampleService.PingComplexModelAsync(complexModel);
+            return $"result. FloatProperty: {complexResult.FloatProperty}, " +
                        $"StringProperty: {complexResult.StringProperty}, " +
                        $"ListProperty: {string.Join(" ", complexResult.ListProperty)}, " +
                        $"DateTimeOffsetProperty: {complexResult.DateTimeOffsetProperty}, " +
                        $"EnumProperty: {complexResult.TestEnum}";
-            }).ToArray();
         }
 
         private static DateTime RandomDay()
